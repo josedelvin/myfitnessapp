@@ -35,10 +35,11 @@ Follow Along"/>
         source1= {require("../assets/images/plank.png")} 
         source= {require("../assets/images/plank.png")} 
         title="BullyJuice"
-        Date="         Feb 20, 2022"
+        Date="Feb 20, 2022"
         description="20 MINUTE FULL BODY WORKOUT |
 Follow Along"/>  
       </ScrollView >
+  
   
     </View>
   
@@ -67,6 +68,7 @@ const styles = StyleSheet.create({
         fontSize:14,
         fontStyle:"normal",
         fontWeight: "bold",
+        alignSelf:'center'
       },   
       image:{
         marginBottom:1,

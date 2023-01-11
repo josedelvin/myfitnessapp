@@ -33,27 +33,29 @@ background : {
   image:{
     height: 30,
     width:30,
-    borderRadius:"13"
+    borderRadius:13
   },
   title:{
     bottom:190,
     left:15,
-    flexDirection:"row"
+    flexDirection:"column"
   },
   text:{
-    left:11,
+    bottom:30,
+    left:35,
     color:"white",
     fontStyle:"normal",
     fontWeight:"bold"
   },
   Datetext:{
-    top:15,
-    right:95,
+    bottom:30,
+    left:35,
     color:"white",
+    fontStyle:"normal",
     fontWeight:"bold"
   },
   descr:{
-    bottom:75,
+    bottom:110,
     left:15,
     flexDirection:"row",
     color:"white",

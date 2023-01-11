@@ -20,7 +20,8 @@ const Homepage = () => {
         });
     }, []);
   return (
-        <ScrollView>
+        <ScrollView 
+        showsVerticalScrollIndicator={false}>
             <Image 
           
             style={styles.background}
@@ -42,8 +43,8 @@ const Homepage = () => {
 const styles = StyleSheet.create({
   background : {
     height: 260,
-    width:400,
-  }, 
+    width:'100%'
+    }, 
   textstyle: {
     top: 50,
     left: 20,
