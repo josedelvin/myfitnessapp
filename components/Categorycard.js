@@ -4,7 +4,7 @@ import React from 'react'
 
 const Catergorycard = ({source1,Date,source,title,description}) => {
   return (
-    <TouchableOpacity>
+    <TouchableOpacity style={{height:"100%",width:"33%"}}>
       
         <Image style={styles.background} 
         source={source}
@@ -24,10 +24,10 @@ const Catergorycard = ({source1,Date,source,title,description}) => {
 
 const styles = StyleSheet.create({
 background : {
-    height: 200,
+    height: "55%",
     width:314,
     borderRadius:19,
-    marginRight:30,
+    marginRight:36,
     position:"relative",
   },
   image:{
@@ -36,27 +36,27 @@ background : {
     borderRadius:13
   },
   title:{
-    bottom:190,
-    left:15,
+    bottom:"53%",
+    left:"3%",
     flexDirection:"column"
   },
   text:{
-    bottom:30,
-    left:35,
+    bottom:"45%",
+    left:"10%",
     color:"white",
     fontStyle:"normal",
     fontWeight:"bold"
   },
   Datetext:{
-    bottom:30,
-    left:35,
+    bottom:"45%",
+    left:"10%",
     color:"white",
     fontStyle:"normal",
     fontWeight:"bold"
   },
   descr:{
-    bottom:110,
-    left:15,
+    bottom:"32%",
+    left:"4%",
     flexDirection:"row",
     color:"white",
     fontSize:15,

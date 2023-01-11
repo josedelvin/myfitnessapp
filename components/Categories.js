@@ -1,7 +1,6 @@
 import { View, Text,StyleSheet,ScrollView,Image,TouchableOpacity} from 'react-native'
 import React from 'react'
 import Catergorycard from './Categorycard'
-import FeaturedRow from './FeaturedRow'
 
 const Categories = () => {
   return (
@@ -39,30 +38,28 @@ Follow Along"/>
         description="20 MINUTE FULL BODY WORKOUT |
 Follow Along"/>  
       </ScrollView >
-  
-  
     </View>
-  
-    
+   
   )
 }
+
 
 const styles = StyleSheet.create({
 
     titleBox: {
         backgroundColor: '#9553CC',
-        margin:100,
-        padding:13,
+        margin:"25%",
+        padding:"3%",
         color:'black',
         position:"relative",
-        marginTop:30,
+        marginTop:"8%",
         contentContainerStyle:"center",
         overflow:"hidden",
-        borderRadius:10,
-        marginBottom:40,
+        borderRadius:15,
+        marginBottom:"15%",
       },
       scrollview: {
-        paddingHorizontal:10,
+        paddingHorizontal:"3%",
       },
       title1: {
         fontSize:14,
@@ -71,23 +68,21 @@ const styles = StyleSheet.create({
         alignSelf:'center'
       },   
       image:{
-        marginBottom:1,
-        left:10,
-        margin:1,
-        padding:30,
-        paddingLeft:110,
-        paddingTop:1,
-        height:1,
-        width:1
+        left:"30%",
+        padding:"8%",
+        paddingLeft:"33%",
+        paddingTop:'1%',
+        height:"5%",
+        width:"5%"
       } ,
       text:{
-        marginBottom:20,
-        paddingBottom:1,
+        marginBottom:"6%",
+        paddingBottom:"1%",
         flexDirection:"row"
       } ,
       text2:{
-        paddingLeft:165,
-        paddingTop:8,
+        paddingLeft:"37%",
+        paddingTop:"3%",
         fontSize:16
       } 
 }

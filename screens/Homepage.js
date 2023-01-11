@@ -1,87 +1,94 @@
-import {SafeAreaView, Text, View, Image,StyleSheet,ScrollView,Headers} from 'react-native'
-import { React, useLayoutEffect } from 'react'
-import { useNavigation } from '@react-navigation/native'
-import Categories from '../components/Categories';
-import FeaturedRow from '../components/FeaturedRow';
+import {
+  SafeAreaView,
+  Text,
+  View,
+  Image,
+  StyleSheet,
+  ScrollView,
+  Headers,
+} from "react-native";
+import { React, useLayoutEffect } from "react";
+import { useNavigation } from "@react-navigation/native";
+import Categories from "../components/Categories";
+import Category2 from "../components/Category2";
 
 const current = new Date();
-const date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
-
-
-
-
+const date = `${current.getDate()}/${
+  current.getMonth() + 1
+}/${current.getFullYear()}`;
 
 const Homepage = () => {
-    const navigation = useNavigation();
+  const navigation = useNavigation();
 
-    useLayoutEffect(() => {
-        navigation.setOptions({
-            headerShown: false,
-        });
-    }, []);
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      headerShown: false,
+    });
+  }, []);
   return (
-        <ScrollView 
-        showsVerticalScrollIndicator={false}>
-            <Image 
-          
-            style={styles.background}
-            source= {require("../assets/images/homepagepic1.jpg")}
-            />
-            
-            <View style={styles.textstyle}>
-              <Text style={styles.text}>WORKOUT OF THE DAY</Text>
-              <Text style={styles.text2}>Push Ups</Text>
-              <Text style={styles.text3}>{date}</Text>
-              </View>
-              <View >
-                <Categories/>
-              </View>
-            </ScrollView>
-  )
-}
+    <View  style={{ flex: 1, flexDirection: 'column' }}>
+      <ScrollView style={{ flex:1 }}
+        showsVerticalScrollIndicator={false}
+      >
+        <Image
+          style={styles.background}
+          source={require("../assets/images/homepagepic1.jpg")}
+        />
+
+        <View style={styles.textstyle}>
+          <Text style={styles.text}>WORKOUT OF THE DAY</Text>
+          <Text style={styles.text2}>Push Ups</Text>
+          <Text style={styles.text3}>{date}</Text>
+        </View>
+        <View>
+          <Categories />
+        </View>
+
+        <View style={styles.paddingstyle}>
+          <Category2 />
+        </View>
+      </ScrollView>
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
-  background : {
-    height: 260,
-    width:'100%'
-    }, 
+  background: {
+    height: "75%",
+    width: "100%",
+  },
   textstyle: {
-    top: 50,
-    left: 20,
-    position:"absolute",
-    width: '100%',
-    height: '100%',
+    top: "15%",
+    left: "5%",
+    position: "absolute",
+    width: "100%",
+    height: "100%",
   },
   text: {
-       backgroundColor: 'black',
-       marginRight:220,
-       padding:5,
-        color:'white',
-        position:"absolute",
-        marginTop:3,
-        overflow:"hidden",
-        borderRadius:10,
-
+    backgroundColor: "black",
+    padding: "1%",
+    color: "white",
+    position: "absolute",
+    overflow: "hidden",
+    borderRadius: 10,
   },
   text2: {
-    color:'white',
-    position:"absolute",
-    marginRight:250,
-    padding:5,
-    paddingTop: 120,
-    paddingBottom:1,
-    overflow:"hidden"
+    color: "white",
+    position: "absolute",
+    paddingTop: "35%",
+    overflow: "hidden",
   },
   text3: {
-    color:'white',
-    position:"absolute",
-    marginRight:250,
-    padding:5,
-    paddingTop:155,
-    paddingBottom:1,
-    overflow:"hidden"
-  }
-}
-)
+    color: "white",
+    position: "absolute",
+    paddingTop: "45%",
+    overflow: "hidden",
+  },
+  paddingstyle: {
+    bottom: "20%",
+    paddingLeft:"3%",
+    flexGrow: 1
+  },
+});
 
-export default Homepage
+export default Homepage;
