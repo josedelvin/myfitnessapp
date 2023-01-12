@@ -10,9 +10,6 @@ import {
 } from "react-native";
 import { React, useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
-import Categories from "../components/Categories";
-import Category2 from "../components/Category2";
-import Icon from "react-native-vector-icons/AntDesign";
 import IonIcon from 'react-native-vector-icons/Ionicons'
 import SearchBar from '../components/shared/searchbar';
 import Categoryyoutube from "../components/Categoryyoutube";

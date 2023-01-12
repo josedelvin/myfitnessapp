@@ -1,14 +1,19 @@
 import { View, Text ,ScrollView,Image,StyleSheet,TouchableOpacity} from 'react-native'
 import React from 'react'
+import { useNavigation } from '@react-navigation/native';
 import Category2card from './Category2card'
 
 const Category2 = () => {
+    const navigation = useNavigation();
+  const handleButtonPress = () => {
+    navigation.navigate('Beginnerworkout');
+  };
   return (
-    <View style={{ width: "120%", height: "115%" }}>
+    <View style={{ width: "120%", height: "113%" }}>
         <View style={styles.textbox}>
             <Image  source= {require("../assets/images/beginnerlogo.png")} />
             <Text style={styles.text}>Beginner Workout</Text>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={handleButtonPress}>
         <Text style={styles.text2}>VIEW ALL</Text>
         </TouchableOpacity>
         </View>
@@ -18,7 +23,7 @@ const Category2 = () => {
     showsHorizontalScrollIndicator={false}>
 
         <Category2card 
-        source1= {require("../assets/images/beginner1.png")}
+        source1=  {require("../assets/images/beginner1.png")}
         title="Full Body"
         />
         <Category2card 

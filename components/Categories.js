@@ -1,17 +1,30 @@
-import { View, Text,StyleSheet,ScrollView,Image,TouchableOpacity} from 'react-native'
+import { View, Text,StyleSheet,ScrollView,Image,TouchableOpacity,Linking} from 'react-native'
 import React from 'react'
 import Catergorycard from './Categorycard'
+import { useNavigation } from '@react-navigation/native';
+import Youtube from '../screens/Youtube';
 
-const Categories = () => {
+
+
+
+const Categories = () => { 
+  const navigation = useNavigation();
+  const handleButtonPress = () => {
+    navigation.navigate('Youtube');
+  };
+const handleImagePress = (youtubeLink) => {
+  navigation.navigate('Youtube', {youtubeLink});
+};
   return (
+   
     <View>
     <View style={styles.titleBox} >
       <Text style={styles.title1}>Today is your Leg Day!</Text>
       </View>
       <View style={styles.text}>
         <Image style={styles.image} source= {require("../assets/images/youtube-logo.png")}/>
-        <TouchableOpacity>
-        <Text style={styles.text2}>VIEW ALL</Text>
+        <TouchableOpacity onPress={handleButtonPress}>
+        <Text  style={styles.text2}  >VIEW ALL</Text>
         </TouchableOpacity>
         </View>
       <ScrollView style={styles.scrollview} horizontal
@@ -20,6 +33,8 @@ const Categories = () => {
         source1= {require("../assets/images/nextworkout.jpg")}
         source= {require("../assets/images/leg.png")}
         title="NEXT Workout"
+        youtubeLink="https://www.youtube.com/watch?v=UYvwb6pBvg8&ab_channel=TahmidAhmed"
+        onPress={() => handleImagePress(youtubeLink)}
         Date="Sep 9, 2020"
         description="Home Leg Workout |
 Follow Along"/>
