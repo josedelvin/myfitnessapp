@@ -4,9 +4,9 @@ import Category2card from './Category2card'
 
 const Category2 = () => {
   return (
-    <View>
+    <View style={{ width: "120%", height: "115%" }}>
         <View style={styles.textbox}>
-            <Image source= {require("../assets/images/beginnerlogo.png")} />
+            <Image  source= {require("../assets/images/beginnerlogo.png")} />
             <Text style={styles.text}>Beginner Workout</Text>
             <TouchableOpacity>
         <Text style={styles.text2}>VIEW ALL</Text>
@@ -14,33 +14,33 @@ const Category2 = () => {
         </View>
         
 
-    <ScrollView horizontal
+    <ScrollView style={styles.scrollview} horizontal={true}
     showsHorizontalScrollIndicator={false}>
 
         <Category2card 
-        source1= {require("../assets/images/plank.png")}
+        source1= {require("../assets/images/beginner1.png")}
         title="Full Body"
         />
         <Category2card 
-        source1= {require("../assets/images/plank.png")}
-        title="Full Body"
+        source1= {require("../assets/images/beginner2.png")}
+        title="Upper Body"
         />
         <Category2card 
-        source1= {require("../assets/images/plank.png")}
-        title="Full Body"/>
+        source1= {require("../assets/images/beginner3.jpg")}
+        title="Lower Body"/>
     </ScrollView>
     </View>
   )
 }
 const styles = StyleSheet.create({
-scrollview: {
-    paddingHorizontal:"3%",
-    
+    container:{
+     marginBottom:"5%",
+     
+    },
 
-},
 textbox:{
     flexDirection:"row",
-    paddingLeft:"3%",
+    paddingBottom:"5%",
 
 },
 text:{
@@ -49,10 +49,13 @@ text:{
     fontSize:22,
 },
 text2:{
-    paddingLeft:"10%",
+    paddingLeft:"11%",
     paddingTop:"8%",
-    fontSize:16
-  } 
+    fontSize:16,
+  } ,
+  scrollview: {
+    paddingHorizontal:"1%",
+  },
 }
 )
   

@@ -10,7 +10,6 @@ export default function App() {
   return (
     <NavigationContainer style={styles.container}> 
       <Stack.Navigator>
-        
         <Stack.Screen name="HomePage" component={Youtube} />
         </Stack.Navigator>
      

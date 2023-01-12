@@ -65,7 +65,8 @@ const styles = StyleSheet.create({
         fontSize:14,
         fontStyle:"normal",
         fontWeight: "bold",
-        alignSelf:'center'
+        alignSelf:'center',
+        
       },   
       image:{
         left:"30%",

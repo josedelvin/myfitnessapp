@@ -8,13 +8,13 @@ const Category2card = ({source1,title}) =>{
       <Image style={styles.background} 
         source={source1}
         />
-        <View style={styles.title}>
-          <Text>{title}</Text>
+        <View >
+          <Text style={styles.title1}>{title}</Text>
         </View>
     </TouchableOpacity>
     </View>
   )
-}
+}   
 
 const styles = StyleSheet.create({
   content:{
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     padding:1,
   },
   background : {
-    height: "45%",
+    height: "48%",
     width:314,
     borderRadius:19,
     marginRight:36,
@@ -34,10 +34,11 @@ const styles = StyleSheet.create({
     width:30,
     borderRadius:13
   },
-  title:{
-    bottom:"8%",
+  title1:{
+    bottom:"130%",
     left:"4%",
-    color:'white',
+    color:"white",
+    fontSize:20,
     flexDirection:"column"
   },
 }

@@ -12,7 +12,10 @@ import { React, useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import Categories from "../components/Categories";
 import Category2 from "../components/Category2";
-
+import Icon from "react-native-vector-icons/AntDesign";
+import IonIcon from 'react-native-vector-icons/Ionicons'
+import SearchBar from '../components/shared/searchbar';
+import Categoryyoutube from "../components/Categoryyoutube";
 const Youtube = () => {
   const navigation = useNavigation();
 
@@ -23,17 +26,19 @@ const Youtube = () => {
   }, []);
   return (
     <SafeAreaView style={{ flex: 1, flexDirection: "column" ,backgroundColor:"#2b2a2a"}}>
-        <View style={styles.HeaderBox}>
+        <View >
+            <SearchBar />
+            <View style={{left:"4%",bottom:'25%',}}>
+            <IonIcon style={{color:"white",}} size={30} name="ios-arrow-back" />
+          </View>
       <Text style={styles.HeaderTitle}>Youtube Workouts</Text>
       <TouchableOpacity>
       <Image  style={styles.spotifylogo} source={require("../assets/images/spotify.png")}/>
       </TouchableOpacity>
         </View>
-      <ScrollView style={{ flex: 1 }}
-        showsVerticalScrollIndicator={false}>
-
-
-      </ScrollView>
+      <View >
+        <Categoryyoutube/>
+      </View>
     </SafeAreaView>
   );
 };
@@ -41,19 +46,16 @@ const styles = StyleSheet.create({
     HeaderTitle:{
         color:'white',
         margin:5,
-        padding:"5%",
-        paddingLeft:'10%',
+        bottom:"50%",
+        paddingLeft:'20%',
         fontSize:26,
     },
-    HeaderBox:{
-        height:'30%',
-        width:"100%"
-    },
     spotifylogo:{
-        
+      height:30,
+      width:30,
         padding:"1%", 
         left:"87%",
-        bottom:"140%"
+        bottom:"370%"
     }
 }
 )

@@ -4,9 +4,9 @@ import {
   View,
   Image,
   StyleSheet,
-  ScrollView,
   Headers,
 } from "react-native";
+import { ScrollView } from "react-native-gesture-handler";
 import { React, useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import Categories from "../components/Categories";
@@ -26,35 +26,46 @@ const Homepage = () => {
     });
   }, []);
   return (
-    <View  style={{ flex: 1, flexDirection: 'column' }}>
-      <ScrollView style={{ flex:1 }}
-        showsVerticalScrollIndicator={false}
-      >
-        <Image
-          style={styles.background}
-          source={require("../assets/images/homepagepic1.jpg")}
-        />
+    <View style={{ flex: 1 }}>
+      <ScrollView style={{ flex: 1 }} showsVerticalScrollIndicator={false}>
+        
+          <View style={[styles.container]}>
+          <Image
+            style={styles.background}
+            source={require("../assets/images/homepagepic1.jpg")}
+          />
 
-        <View style={styles.textstyle}>
-          <Text style={styles.text}>WORKOUT OF THE DAY</Text>
-          <Text style={styles.text2}>Push Ups</Text>
-          <Text style={styles.text3}>{date}</Text>
-        </View>
-        <View>
-          <Categories />
-        </View>
+          <View style={styles.textstyle}>
+            <Text style={styles.text}>WORKOUT OF THE DAY</Text>
+            <Text style={styles.text2}>Push Ups</Text>
+            <Text style={styles.text3}>{date}</Text>
+          </View>
+          <View >
+            <Categories />
+          </View>
 
-        <View style={styles.paddingstyle}>
-          <Category2 />
-        </View>
+          <View style={styles.paddingstyle} >
+            <Category2 />
+          </View>
+          
+          </View>
+      
+       <Text style={{height:500,overflow:"hidden",width:150}} > </Text>
       </ScrollView>
-    </View>
+      
+   </View>
   );
 };
 
 const styles = StyleSheet.create({
+  container:{
+    flex:1,
+    paddingBottom:200,
+    height:"100%",
+  },
+
   background: {
-    height: "75%",
+    height: "70%",
     width: "100%",
   },
   textstyle: {
@@ -86,8 +97,7 @@ const styles = StyleSheet.create({
   },
   paddingstyle: {
     bottom: "20%",
-    paddingLeft:"3%",
-    flexGrow: 1
+left:"2%"
   },
 });
 
