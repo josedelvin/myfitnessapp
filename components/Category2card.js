@@ -1,3 +1,7 @@
+// Name: Jose Delvin
+// Admission no: 2108306
+
+
 import { View, Text,Image ,TouchableOpacity,ImageBackground,StyleSheet} from 'react-native'
 import React from 'react'
 

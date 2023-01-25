@@ -1,3 +1,6 @@
+// Name: Jose Delvin
+// Admission no: 2108306
+
 import {
   SafeAreaView,
   Text,

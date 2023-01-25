@@ -1,4 +1,7 @@
-import { View, Text ,TouchableOpacity,Image,StyleSheet} from 'react-native'
+// Name: Jose Delvin
+// Admission no: 2108306
+
+import { Text ,TouchableOpacity,Image,StyleSheet} from 'react-native'
 import React from 'react'
 
 

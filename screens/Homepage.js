@@ -1,16 +1,18 @@
+// Name: Jose Delvin
+// Admission no: 2108306
 import {
-  SafeAreaView,
   Text,
   View,
   Image,
   StyleSheet,
-  Headers,
+  TouchableOpacity
 } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import { React, useLayoutEffect } from "react";
 import { useNavigation } from "@react-navigation/native";
 import Categories from "../components/Categories";
 import Category2 from "../components/Category2";
+import Icon from "react-native-vector-icons/MaterialCommunityIcons"
 
 const current = new Date();
 const date = `${current.getDate()}/${
@@ -34,6 +36,9 @@ const Homepage = () => {
             style={styles.background}
             source={require("../assets/images/homepagepic1.jpg")}
           />
+          <TouchableOpacity >
+        <Icon  style={styles.spotifylogo} size={30} name="headphones"/>
+        </TouchableOpacity>
 
           <View style={styles.textstyle}>
             <Text style={styles.text}>WORKOUT OF THE DAY</Text>
@@ -99,6 +104,17 @@ const styles = StyleSheet.create({
     bottom: "20%",
 left:"2%"
   },
+
+  spotifylogo:{
+    height:30,
+    width:30,
+      padding:"1%", 
+      bottom:"10%",
+      bottom:"820%",
+      left:"85%",
+      color:"white",
+
+  }
 });
 
 export default Homepage;

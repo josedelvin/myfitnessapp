@@ -10,6 +10,9 @@ import Youtube from './screens/Youtube';
 import FeedbackScreen from './screens/FeedbackScreen';
 import Beginnerworkout from './screens/Beginnerworkout';
 import Beginnersfull from './screens/Beginnersfull';
+import ProfileScreen from './screens/ProfileScreen';
+import spotify from './screens/spotify'
+import Welcomescreen from './screens/WelcomeScreen';
 
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
@@ -31,9 +34,11 @@ function TabNavigator() {
                 : 'chatbox-outline'
               } 
               
-              // else if (route.name === 'Profile') {
-              //   iconName = focused ? ''
-              // }
+              else if (route.name === 'Profile') {
+                iconName = focused 
+                ? 'person-outline'
+                : 'person-outline';
+              }
       
               // You can return any component that you like here!
               return <Ionicons name={iconName} size={size} color={color}/>;
@@ -44,8 +49,10 @@ function TabNavigator() {
             tabBarInactiveTintColor: 'gray',
           })}>
       <Tab.Screen  name="Home" component={Homepage} />
+      <Tab.Screen  name="Profile" component={ProfileScreen} />
       <Tab.Screen  name="Feedback" component={FeedbackScreen} />
-      <Tab.Screen  name="Beginnersfull" component={Beginnersfull} />
+      <Tab.Screen name='Spotify' component={spotify} />
+      
     </Tab.Navigator>
   );
 }
@@ -54,9 +61,13 @@ export default function App() {
   return (
     <NavigationContainer >
       <Stack.Navigator screenOptions={{headerShown: false}}>
+        
         <Stack.Screen  name="TabNavigator" component={TabNavigator} />
+        <Stack.Screen  name="WelcomeScreen" component={Welcomescreen} />
         <Stack.Screen name="Youtube" component={Youtube} />
+        <Stack.Screen name='Spotify' component={spotify} />
         <Stack.Screen name="Beginnerworkout" component={Beginnerworkout} />
+        <Stack.Screen name="Beginnersfull" component={Beginnersfull} />
       </Stack.Navigator>
     </NavigationContainer>
   );

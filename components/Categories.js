@@ -1,8 +1,11 @@
+// Name: Jose Delvin
+// Admission no: 2108306
+
 import { View, Text,StyleSheet,ScrollView,Image,TouchableOpacity,Linking} from 'react-native'
 import React from 'react'
 import Catergorycard from './Categorycard'
 import { useNavigation } from '@react-navigation/native';
-import Youtube from '../screens/Youtube';
+
 
 
 

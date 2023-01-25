@@ -1,3 +1,9 @@
+//2107925
+//Name: Skye Ryan Chew
+
+
+
+
 import { StyleSheet, Text, View,ImageBackground,TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { useLayoutEffect } from "react";
@@ -12,7 +18,7 @@ const TextPlaceholder = () => {
     placeholder={text}
     onChangeText={text => setText(text)}
     multiline = {true}
-    numberOfLines ={7}
+    numberOfLines ={1}
     />
   );
 };

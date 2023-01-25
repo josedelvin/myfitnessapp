@@ -1,3 +1,6 @@
+// Name: Jose Delvin
+// Admission no: 2108306
+
 import {
     SafeAreaView,
     Text,
@@ -22,7 +25,7 @@ import Beginnercategory from "../components/Beginnercategory";
       });
     }, []);
     return (
-      <SafeAreaView style={{ flex: 1, flexDirection: "column" }}>
+      <SafeAreaView style={{ flex: 1, flexDirection: "column",backgroundColor:"#2b2a2a" }}>
           <View >
               <SearchBar />
               <View style={{left:"4%",bottom:'25%',}}>

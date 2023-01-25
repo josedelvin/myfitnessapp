@@ -1,5 +1,9 @@
+// Name: Jose Delvin
+// Admission no: 2108306
 import { View, Text ,TouchableOpacity,Image,StyleSheet} from 'react-native'
 import React from 'react'
+
+
 
 
 const Catergorycard = ({source1,Date,source,title,description}) => {

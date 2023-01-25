@@ -1,3 +1,7 @@
+// Name: Jose Delvin
+// Admission no: 2108306
+
+
 import { TextInput, View,StyleSheet,Text } from "react-native";
 import Icon from "react-native-vector-icons/AntDesign";
 const SearchBar = () => {
