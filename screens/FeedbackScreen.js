@@ -4,24 +4,30 @@
 
 
 
-import { StyleSheet, Text, View,ImageBackground,TouchableOpacity } from "react-native";
+import { StyleSheet, Text, View,ImageBackground,TouchableOpacity,TouchableWithoutFeedback,Keyboard} from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { useLayoutEffect } from "react";
 import * as React from 'react';
 import Icon from "react-native-vector-icons/AntDesign"
 import { TextInput, Button } from "react-native-paper";
 
+
 const TextPlaceholder = () => {
   const [text, setText] = React.useState("Describe your feedback here");
   return(
+    <TouchableWithoutFeedback onPress={Keyboard.dismiss} accessible={false}>
+      <View style={{ flex: 1}}>
     <TextInput style = {styles.Box}
     placeholder={text}
     onChangeText={text => setText(text)}
-    multiline = {true}
-    numberOfLines ={1}
-    />
+    multiline={true}
+    numberOfLines ={1}/> 
+    </View>
+    </TouchableWithoutFeedback>
   );
 };
+
+
 
 const SubmitButton = () => (
   <Button Icon="checkcircle"style = {styles.Button} mode="contained" onPress={() => console.log('Pressed')}>
@@ -75,6 +81,8 @@ const FeedbackScreen  = () => {
 
       <TextPlaceholder/>
         <SubmitButton/>
+        
+        
       </ImageBackground>
     </View>
   );
@@ -139,7 +147,7 @@ const styles = StyleSheet.create({
 
   Box: {
     alignContent: 'center',
-    top: "15%",
+    top: "25%",
     borderRadius: 20,
     borderWidth: 5,
     margin: 10,
@@ -147,11 +155,8 @@ const styles = StyleSheet.create({
   },
 
   Button: {
-    
-    alignContent: 'center',
     alignSelf: 'center',
     right:"7%",
-    top: "20%",
     width: "150%",
     shadowRadius: 25,
 

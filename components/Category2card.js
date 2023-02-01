@@ -28,9 +28,9 @@ const styles = StyleSheet.create({
   },
   background : {
     height: "48%",
-    width:314,
+    width:312,
     borderRadius:19,
-    marginRight:36,
+    marginRight:30,
     position:"relative",
   },
   image:{

@@ -18,6 +18,22 @@ import SearchBar from '../components/shared/searchbar';
 import Categoryyoutube from "../components/Categoryyoutube";
 const Youtube = () => {
   const navigation = useNavigation();
+  
+
+
+
+  const handleSpotifyIconPress = () => {
+    navigation.navigate('Spotify');
+  };
+  const back = () => {
+    navigation.navigate('Home');
+  };
+
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      headerShown: false,
+    });
+  }, []);
 
   useLayoutEffect(() => {
     navigation.setOptions({
@@ -25,14 +41,17 @@ const Youtube = () => {
     });
   }, []);
   return (
-    <SafeAreaView style={{ flex: 1, flexDirection: "column" ,backgroundColor:"#2b2a2a"}}>
+    <SafeAreaView style={{ flex: 1, flexDirection: "column" ,backgroundColor:"#A2AEBB"}}>
         <View >
             <SearchBar />
             <View style={{left:"4%",bottom:'25%',}}>
-            <IonIcon style={{color:"white",}} size={30} name="ios-arrow-back" />
           </View>
+          
       <Text style={styles.HeaderTitle}>Youtube Workouts</Text>
-      <TouchableOpacity>
+      <TouchableOpacity  style={{bottom:"50%", left:'4%'}} onPress={back}>
+            <IonIcon style={{color:"white",}} size={30} name="ios-arrow-back" />
+      </TouchableOpacity> 
+      <TouchableOpacity  onPress={handleSpotifyIconPress}>
       <Image  style={styles.spotifylogo} source={require("../assets/images/spotify.png")}/>
       </TouchableOpacity>
         </View>
@@ -46,7 +65,8 @@ const styles = StyleSheet.create({
     HeaderTitle:{
         color:'white',
         margin:5,
-        bottom:"50%",
+        width:"80 %",
+        bottom:"27%",
         paddingLeft:'20%',
         fontSize:26,
     },

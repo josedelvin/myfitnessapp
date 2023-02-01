@@ -25,7 +25,7 @@ import Beginnercategory from "../components/Beginnercategory";
       });
     }, []);
     return (
-      <SafeAreaView style={{ flex: 1, flexDirection: "column",backgroundColor:"#2b2a2a" }}>
+      <SafeAreaView style={{ flex: 1, flexDirection: "column",backgroundColor:"#A2AEBB" }}>
           <View >
               <SearchBar />
               <View style={{left:"4%",bottom:'25%',}}>

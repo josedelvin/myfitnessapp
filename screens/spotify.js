@@ -3,6 +3,8 @@ import React from "react";
 import Icon from "react-native-vector-icons/Zocial";
 import { useNavigation } from "@react-navigation/native";
 import { useLayoutEffect } from "react";
+import IonIcon from "react-native-vector-icons/AntDesign"
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 function PlayComponenets() {
     const navigation = useNavigation();
@@ -15,15 +17,23 @@ function PlayComponenets() {
 
   return(
        <View style ={styles.Playbuttons}>
-          <Image source={require('../assets/images/rewind.jpeg')}></Image>
-          <Image source={require('../assets/images/play.jpeg')}></Image>
-          <Image source={require('../assets/images/forward.jpeg')}></Image>
+        <TouchableOpacity>
+          <IonIcon style={{color:"white",}} size={40} name="banckward"  />
+          </TouchableOpacity>
+          <TouchableOpacity>
+          <IonIcon style={{color:"white",}} size={45} name="play" />
+          </TouchableOpacity>
+          <TouchableOpacity>
+          <IonIcon style={{color:"white",}} size={40} name="forward" />
+          </TouchableOpacity>
         </View>
     
   )
 }
 
 const MusicScreen = () => {
+
+  
   return (
     <View style={styles.Container}>
       <View

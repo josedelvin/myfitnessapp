@@ -1,17 +1,17 @@
 // Name: Jose Delvin
 // Admission no: 2108306
-import { View, Text ,TouchableOpacity,Image,StyleSheet} from 'react-native'
+import { View, Text ,TouchableOpacity,Image,StyleSheet,Linking} from 'react-native'
 import React from 'react'
 
 
 
 
-const Catergorycard = ({source1,Date,source,title,description}) => {
+const Catergorycard = ({source1,Date,youtubeLink,source,title,description}) => {
   return (
-    <TouchableOpacity style={{height:"100%",width:"33%"}}>
+    <TouchableOpacity style={{height:"100%",width:"33%"}} onPress={() => Linking.openURL(youtubeLink)}>
       
         <Image style={styles.background} 
-        source={source}
+        source={source} 
         />
         <View style={styles.title}>
         <Image style={styles.image}

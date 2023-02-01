@@ -22,7 +22,7 @@ const Beginnersfull = () => {
   }, []);
   return (
     <SafeAreaView
-      style={{ flex: 1, flexDirection: "column", backgroundColor: "#2b2a2a" }}
+      style={{ flex: 1, flexDirection: "column" }}
     >
       <View>
         <View style={{ position: "relative", padding: 1 }}>

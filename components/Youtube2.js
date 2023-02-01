@@ -1,13 +1,13 @@
 // Name: Jose Delvin
 // Admission no: 2108306
 
-import { View, Text ,TouchableOpacity,Image,StyleSheet} from 'react-native'
+import { View, Text ,TouchableOpacity,Image,StyleSheet,Linking} from 'react-native'
 import React from 'react'
 
 
-const Youtube2 = ({source1,Date,source,title,description}) => {
+const Youtube2 = ({source1,Date,youtubeLink,source,title,description}) => {
   return (
-    <TouchableOpacity style={{left:"3.5%",width:"100%"}} >
+    <TouchableOpacity style={{left:"3.5%",width:"100%"}} onPress={() => Linking.openURL(youtubeLink)} >
       
         <Image style={styles.background} 
         source={source}

@@ -12,7 +12,7 @@ const Category2 = () => {
     navigation.navigate('Beginnerworkout');
   };
   return (
-    <View style={{ width: "120%", height: "113%" }}>
+    <View style={{ width: "100%", height: "110%" }}>
         <View style={styles.textbox}>
             <Image  source= {require("../assets/images/beginnerlogo.png")} />
             <Text style={styles.text}>Beginner Workout</Text>
@@ -41,10 +41,7 @@ const Category2 = () => {
   )
 }
 const styles = StyleSheet.create({
-    container:{
-     marginBottom:"5%",
-     
-    },
+    
 
 textbox:{
     flexDirection:"row",
@@ -52,17 +49,18 @@ textbox:{
 
 },
 text:{
-    top:'7%',
+    top:'9%',
     paddingLeft:"2%",
     fontSize:22,
 },
 text2:{
-    paddingLeft:"11%",
+    paddingLeft:"13%",
     paddingTop:"8%",
     fontSize:16,
   } ,
   scrollview: {
     paddingHorizontal:"1%",
+    paddingRight:"20%"
   },
 }
 )

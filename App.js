@@ -3,8 +3,6 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import { StyleSheet } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons'
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons'
-
 import Homepage from './screens/Homepage';
 import Youtube from './screens/Youtube';
 import FeedbackScreen from './screens/FeedbackScreen';
@@ -47,23 +45,26 @@ function TabNavigator() {
             },
             tabBarActiveTintColor: 'tomato',
             tabBarInactiveTintColor: 'gray',
-          })}>
+          })}> 
+          
       <Tab.Screen  name="Home" component={Homepage} />
       <Tab.Screen  name="Profile" component={ProfileScreen} />
       <Tab.Screen  name="Feedback" component={FeedbackScreen} />
-      <Tab.Screen name='Spotify' component={spotify} />
-      
     </Tab.Navigator>
   );
 }
 
 export default function App() {
   return (
+    
     <NavigationContainer >
-      <Stack.Navigator screenOptions={{headerShown: false}}>
-        
+     
+     <Stack.Navigator screenOptions={{headerShown: false}} >
+          
+             
+          
         <Stack.Screen  name="TabNavigator" component={TabNavigator} />
-        <Stack.Screen  name="WelcomeScreen" component={Welcomescreen} />
+        <Stack.Screen name="WelcomeScreen" component={Welcomescreen} />
         <Stack.Screen name="Youtube" component={Youtube} />
         <Stack.Screen name='Spotify' component={spotify} />
         <Stack.Screen name="Beginnerworkout" component={Beginnerworkout} />
